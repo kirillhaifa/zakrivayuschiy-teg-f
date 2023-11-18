@@ -3,45 +3,10 @@
 @font-face {
   font-family: Inter;
   src:
-    local('Inter'),
     url(./Inter-Variable.woff2) format('woff2 supports variations'),
     url(./Inter-Variable.woff2) format('woff2-variations');
+  font-weight: 400 785;
   font-display: swap;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Inter;
-  src:
-    local('Inter'),
-    url(./Inter-Variable.woff2) format('woff2 supports variations'),
-    url(./Inter-Variable.woff2) format('woff2-variations');
-  font-display: swap;
-  font-weight: 465;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Inter;
-  src:
-    local('Inter'),
-    url(./Inter-Variable.woff2) format('woff2 supports variations'),
-    url(./Inter-Variable.woff2) format('woff2-variations');
-  font-display: swap;
-  font-weight: 700;
-  font-style: bold;
-}
-
-@font-face {
-  font-family: Inter;
-  src:
-    local('Inter'),
-    url(./Inter-Variable.woff2) format('woff2 supports variations'),
-    url(./Inter-Variable.woff2) format('woff2-variations');
-  font-display: swap;
-  font-weight: 785;
-  font-style: bold;
 }
 
 @font-face {
