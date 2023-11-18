@@ -21,6 +21,8 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: 'wght' var(--font-weight-standart);
+  font-family: var(--font-main), sans-serif;
 }
 
 .header {
@@ -38,7 +40,7 @@
   margin-top: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
   margin-bottom: 20px;
   color: var(--themes-main-color);
-  font-family: 'Press Start 2P';
+  font-family: var(--font-secondary), monospace;
   font-weight: var(--font-weight-standart);
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   font-style: normal;
@@ -49,7 +51,7 @@
 .header__text {
   margin-bottom: 24px;
   color: var(--themes-main-color);
-  font-family: 'Press Start 2P';
+  font-family: var(--font-secondary), monospace;
   font-weight: var(--font-weight-standart);
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   font-style: normal;
@@ -67,7 +69,7 @@
   border: none;
   opacity: 1;
   color: var(--themes-main-color);
-  font-family: 'Press Start 2P';
+  font-family: var(--font-secondary), monospace;
   font-weight: var(--font-weight-standart);
   font-size: var(--font-size-standart);
   font-style: normal;
@@ -155,7 +157,6 @@
   grid-area: title;
   margin: 5px 10px 3px;
   color: var(--themes-main-color);
-  font-family: Inter;
   font-weight: var(--font-weight-big);
   font-size: 18px;
   font-style: normal;
@@ -218,7 +219,7 @@
   margin-right: clamp(0.6875rem, 0.3354rem + 1.5023vw, 1.6875rem);
   opacity: 0.5;
   color: var(--themes-main-color);
-  font-family: 'Press Start 2P';
+  font-family: var(--font-secondary), monospace;
   font-weight: var(--font-weight-standart);
   font-size: var(--font-size-standart);
   font-style: normal;
@@ -251,7 +252,6 @@
   flex-direction: column;
   margin: 25px 25px 26px;
   color: var(--themes-main-color);
-  font-family: Inter;
   font-weight: var(--font-weight-standart);
   font-size: 18px;
   font-style: normal;
@@ -369,7 +369,7 @@
   height: 38px;
   border: 2px solid var(--themes-main-color);
   color: var(--themes-main-color);
-  font-family: 'Press Start 2P';
+  font-family: var(--font-secondary), monospace;
   font-weight: var(--font-weight-standart);
   font-size: var(--font-size-standart);
   font-style: normal;
@@ -465,7 +465,7 @@
   z-index: 1;
   margin-bottom: 12px;
   color: var(--themes-background);
-  font-family: 'Press Start 2P';
+  font-family: var(--font-secondary), monospace;
   font-weight: var(--font-weight-standart);
   font-size: var(--font-size-standart);
   font-style: normal;
@@ -530,7 +530,7 @@
 .dialog__text {
   grid-area: dialog-text;
   color: var(--themes-main-color);
-  font-family: 'Press Start 2P';
+  font-family: var(--font-secondary), monospace;
   font-weight: var(--font-weight-standart);
   font-size: var(--font-size-standart);
   font-style: normal;
@@ -545,7 +545,7 @@
   margin-top: 30px;
   border: 2px solid var(--themes-main-color);
   padding: 9px 0;
-  font-family: 'Press Start 2P';
+  font-family: var(--font-secondary), monospace;
   font-weight: var(--font-weight-standart);
   font-size: var(--font-size-standart);
   font-style: normal;

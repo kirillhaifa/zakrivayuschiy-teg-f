@@ -11,5 +11,6 @@
   --font-weight-big: 700;
   --font-weight-dark-big: 785;
   --font-weight-dark-small: 465;
-
+  --font-main: Inter;
+  --font-secondary: 'Press Start 2P';
 }

@@ -55,6 +55,6 @@
   font-weight: var(--font-weight-dark-big);
 }
 
-.theme-dark .card__text{
+.theme-dark .card__text {
   font-weight: var(--font-weight-dark-small);
 }
