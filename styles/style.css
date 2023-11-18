@@ -21,7 +21,7 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: 'wght' var(--font-weight-standart);
+  font-variation-settings: 'wght' var(--font-size-standart);
   font-family: var(--font-main), sans-serif;
 }
 
@@ -41,7 +41,6 @@
   margin-bottom: 20px;
   color: var(--themes-main-color);
   font-family: var(--font-secondary), monospace;
-  font-weight: var(--font-weight-standart);
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   font-style: normal;
   line-height: normal;
@@ -52,7 +51,6 @@
   margin-bottom: 24px;
   color: var(--themes-main-color);
   font-family: var(--font-secondary), monospace;
-  font-weight: var(--font-weight-standart);
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   font-style: normal;
   line-height: normal;
@@ -70,7 +68,6 @@
   opacity: 1;
   color: var(--themes-main-color);
   font-family: var(--font-secondary), monospace;
-  font-weight: var(--font-weight-standart);
   font-size: var(--font-size-standart);
   font-style: normal;
   line-height: normal;
@@ -220,7 +217,6 @@
   opacity: 0.5;
   color: var(--themes-main-color);
   font-family: var(--font-secondary), monospace;
-  font-weight: var(--font-weight-standart);
   font-size: var(--font-size-standart);
   font-style: normal;
   line-height: normal;
@@ -252,7 +248,6 @@
   flex-direction: column;
   margin: 25px 25px 26px;
   color: var(--themes-main-color);
-  font-weight: var(--font-weight-standart);
   font-size: 18px;
   font-style: normal;
   line-height: 116.667%;
@@ -370,7 +365,6 @@
   border: 2px solid var(--themes-main-color);
   color: var(--themes-main-color);
   font-family: var(--font-secondary), monospace;
-  font-weight: var(--font-weight-standart);
   font-size: var(--font-size-standart);
   font-style: normal;
   line-height: 90%; /* 12.6px */
@@ -466,7 +460,6 @@
   margin-bottom: 12px;
   color: var(--themes-background);
   font-family: var(--font-secondary), monospace;
-  font-weight: var(--font-weight-standart);
   font-size: var(--font-size-standart);
   font-style: normal;
   line-height: 90%; /* 12.6px */
@@ -531,7 +524,6 @@
   grid-area: dialog-text;
   color: var(--themes-main-color);
   font-family: var(--font-secondary), monospace;
-  font-weight: var(--font-weight-standart);
   font-size: var(--font-size-standart);
   font-style: normal;
   line-height: 150%; /* 21px */
@@ -546,7 +538,6 @@
   border: 2px solid var(--themes-main-color);
   padding: 9px 0;
   font-family: var(--font-secondary), monospace;
-  font-weight: var(--font-weight-standart);
   font-size: var(--font-size-standart);
   font-style: normal;
   line-height: 90%; /* 12.6px */
