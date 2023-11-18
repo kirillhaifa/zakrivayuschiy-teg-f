@@ -180,7 +180,7 @@
 }
 
 .card__item:nth-child(6) .card__image {
-  filter: contrast(130%), sepia(0.7);
+  filter: contrast(130%) sepia(0.7);
 }
 
 .card__item:nth-child(7) .card__image {
