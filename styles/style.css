@@ -21,7 +21,7 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: 'wght' var(--font-size-standart);
+  font-variation-settings: 'wght' var(--font-weight-standart-changable);
   font-family: var(--font-main), sans-serif;
 }
 
@@ -88,13 +88,15 @@
 .theme-menu__button:focus {
   outline: none;
   opacity: 0.6;
-  transition: opacity ease 0.3s;
 }
+
+/*не уверен можно ли отнести следущие правила к анимации, 
+оставил в styles, как и другие подобные*/
 
 .theme-menu__button::after {
   content: '';
   display: block;
-  height: 3px;
+  height: 2px;
   margin-top: 3px;
   background-color: var(--themes-main-color);
   transition: transform 0.3s;
@@ -108,13 +110,11 @@
 
 .theme-menu__button:disabled {
   opacity: 0.6;
-  transition: opacity ease 0.3s;
   pointer-events: none;
 }
 
 .theme-menu__button:hover {
   opacity: 0.6;
-  transition: opacity ease 0.3s;
 }
 
 .card__item {
@@ -136,7 +136,7 @@
   grid-area: title;
   margin: 5px 10px 3px;
   color: var(--themes-main-color);
-  font-weight: var(--font-weight-big);
+  font-variation-settings: 'wght' var(--font-weight-big-changable);
   font-size: 18px;
   font-style: normal;
   line-height: normal;
@@ -159,35 +159,35 @@
   width: 100%;
 }
 
-.card__item:nth-child(1) .card__image {
+.brightness85 {
   filter: brightness(85%);
 }
 
-.card__item:nth-child(2) .card__image {
+.blur3 {
   filter: blur(3px);
 }
 
-.card__item:nth-child(3) .card__image {
+.saturate120 {
   filter: saturate(120%);
 }
 
-.card__item:nth-child(4) .card__image {
+.opacity80 {
   filter: opacity(80%);
 }
 
-.card__item:nth-child(5) .card__image {
+.contrast90 {
   filter: contrast(90%);
 }
 
-.card__item:nth-child(6) .card__image {
+.filter-multiple {
   filter: contrast(130%) sepia(0.7);
 }
 
-.card__item:nth-child(7) .card__image {
+.sepia09 {
   filter: sepia(0.9);
 }
 
-.card__item:nth-child(8) .card__image {
+.grayscale80 {
   filter: grayscale(80%);
 }
 
@@ -226,11 +226,12 @@
 .card__text {
   display: flex;
   flex-direction: column;
-  margin: 25px 25px 26px;
+  margin: 25px 25px 24px;
   color: var(--themes-main-color);
   font-size: 18px;
   font-style: normal;
   line-height: 116.667%;
+  font-variation-settings: 'wght' var(--font-weight-standart-changable);
 }
 
 .card__like-container {
@@ -241,78 +242,27 @@
 
 .card__icon-button {
   grid-area: like;
-  margin-top: -2px;
-  margin-right: 1px;
   margin-left: clamp(10.3125rem, 3.2042rem + 30.3286vw, 30.5rem);
   border: none;
   outline: rgba(var(--themes-main-color) 0) 2px solid;
   outline-offset: -4px;
   background-color: transparent;
-  transition: outline-color 0.3s ease;
   cursor: pointer;
 }
 
-.sparks {
-  opacity: 0;
-}
-
-.card__icon-button:focus {
-  outline: none;
-}
-
-.card__icon-button:focus-visible {
-  outline: var(--themes-main-color) 2px solid;
-  transition: border-color 0.3s ease;
-}
-
-.core {
-  fill: var(--themes-background);
-  transition: fill 0.3s linear 0.03s;
-}
-
-.card__icon-button:hover .core {
-  fill: var(--heart-conrour);
-  transition: fill 0.3s linear;
-}
-
-.main-body {
-  fill: var(--themes-background);
-  transition: fill 0.3s linear;
-}
-
-.card__icon-button:hover .main-body {
-  fill: var(--heart-conrour);
-  transition: fill 0.3s linear 0.05s;
-}
-
-.card__icon-button:active .main-body,
-.card__icon-button:active .core {
-  fill: var(--sparks-color);
-}
-
-.like-icon.is-liked .core {
-  fill: var(--sparks-color);
-  transition: fill 0.3s linear;
-}
-
-.like-icon.is-liked .main-body {
-  fill: var(--sparks-color);
-  transition: fill 0.3s linear 0.05s;
-}
-
-.like-icon.is-liked .contour {
-  fill: var(--sparks-color);
-  transition: fill 0.3s linear 0.06s;
-}
-
 .card__like-button {
-  position: relative;
-  z-index: 0;
   grid-area: like;
   width: 130px;
-  height: 38px;
+  min-height: 38px;
+  margin-top: 2px;
+  align-self: flex-start;
+}
+
+.button-typical {
+  position: relative;
+  z-index: 0;
   border: 2px solid var(--themes-main-color);
-  color: var(--themes-main-color);
+  color: var(--button-text-n-image-color);
   font-family: var(--font-secondary), monospace;
   font-size: var(--font-size-standart);
   font-style: normal;
@@ -321,19 +271,12 @@
   cursor: pointer;
 }
 
-.button__text {
-  position: relative;
-  z-index: 1;
-  color: var(--themes-background);
-  mix-blend-mode: difference;
-}
-
-.card__like-button:focus-visible {
+.button-typical:focus-visible {
   box-shadow: 2px 2px 0 var(--themes-main-color);
   outline: none;
 }
 
-.card__like-button::after {
+.button-typical::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -346,7 +289,7 @@
   transform-origin: left;
 }
 
-.card__like-button:hover::after {
+.button-typical:hover::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -358,20 +301,25 @@
   transform-origin: left;
 }
 
-.footer__image {
+.button-text {
+  position: relative;
+  z-index: 1;
+  color: var(--button-text-n-image-color);
+  mix-blend-mode: difference;
+}
+
+.section__image {
   z-index: 1;
   width: 28px;
   height: 28px;
   margin-top: var(--font-size-standart);
   margin-bottom: 8px;
   margin-left: 5px;
-  fill: var(--themes-background);
+  fill: var(--button-text-n-image-color);
   mix-blend-mode: difference;
 }
 
-.footer__button {
-  position: relative;
-  z-index: 0;
+.section__button {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -379,68 +327,10 @@
   width: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
   margin: auto;
   margin-bottom: 100px;
-  border: 2px solid var(--themes-main-color);
-  background-color: var(--themes-background);
-  cursor: pointer;
 }
 
-.footer__button::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--themes-main-color);
-  transition: transform 1s;
-  transform: scaleX(0);
-  transform-origin: left;
-}
-
-.footer__button:hover::after {
-  z-index: 0;
-  transition: transform 0.5s ease-in-out;
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-.footer__button-text {
-  z-index: 1;
+.section__button-text {
   margin-bottom: 12px;
-  color: var(--themes-background);
-  font-family: var(--font-secondary), monospace;
-  font-size: var(--font-size-standart);
-  font-style: normal;
-  line-height: 90%; /* 12.6px */
-  mix-blend-mode: difference;
-}
-
-.footer__button:focus-visible {
-  box-shadow: 2px 2px 0 var(--themes-main-color);
-  outline: none;
-}
-
-@media (width >= 600px) {
-
-  .footer__button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-  .footer__button-text {
-    margin-top: 17px;
-    margin-bottom: 18px;
-  }
-
-  .footer__image {
-    width: 21px;
-    height: 21px;
-    margin-top: 12px;
-    margin-right: 8px;
-    margin-left: 3px;
-  }
 }
 
 .dialog {
@@ -465,7 +355,7 @@
   width: 39px;
   height: 39px;
   margin-right: 20px;
-  fill: var(--themes-background);
+  fill: var(--button-text-n-image-color);
   mix-blend-mode: difference;
 }
 
@@ -479,26 +369,15 @@
   text-transform: uppercase;
 }
 
-.dialog__button {
-  position: relative;
-  z-index: 0;
+.dialog__form {
   grid-area: dialog-button;
-  margin-top: 30px;
-  border: 2px solid var(--themes-main-color);
-  padding: 9px 0;
-  font-family: var(--font-secondary), monospace;
-  font-size: var(--font-size-standart);
-  font-style: normal;
-  line-height: 90%; /* 12.6px */
-  background: var(--themes-background);
-  cursor: pointer;
+  width: 100%;
 }
 
-.dialog__button-text {
-  position: relative;
-  z-index: 1;
-  color: var(--themes-background);
-  mix-blend-mode: difference;
+.dialog__button {
+  margin-top: 30px;
+  padding: 9px 0;
+  width: 100%;
 }
 
 .dialog::backdrop {
@@ -506,27 +385,25 @@
   background: #000;
 }
 
-.dialog__button::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--themes-main-color);
-  transition: transform 1s;
-  transform: scaleX(0);
-  transform-origin: left;
-}
+@media (width >= 600px) {
 
-.dialog__button:hover::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--themes-main-color);
-  transition: transform 0.5s ease-in-out;
-  transform: scaleX(1);
-  transform-origin: left;
+  .section__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .section__button-text {
+    margin-top: 17px;
+    margin-bottom: 18px;
+  }
+
+  .section__image {
+    width: 21px;
+    height: 21px;
+    margin-top: 12px;
+    margin-right: 8px;
+    margin-left: 3px;
+  }
 }

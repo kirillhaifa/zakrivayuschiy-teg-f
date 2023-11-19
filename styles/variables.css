@@ -7,10 +7,9 @@
   --heart-conrour: #000;
   --sparks-color: #f00;
   --font-size-standart: 14px;
-  --font-weight-standart: 400;
-  --font-weight-big: 700;
-  --font-weight-dark-big: 785;
-  --font-weight-dark-small: 465;
-  --font-main: "Inter";
+  --font-weight-standart-changable: 400;
+  --font-weight-big-changable: 700;
+  --font-main: 'Inter';
   --font-secondary: 'Press Start 2P';
+  --button-text-n-image-color: #fff;
 }

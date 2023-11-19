@@ -6,6 +6,9 @@
   --background-color-3: #004306;
   --heart-conrour: #00cc14;
   --sparks-color: #f00;
+  --button-text-n-image-color: #00cc14;
+  --font-weight-standart-changable: 465;
+  --font-weight-big-changable: 785;
 }
 
 :root.theme-light {
@@ -16,6 +19,9 @@
   --background-color-3: #1a1a1a;
   --heart-conrour: #000;
   --sparks-color: #f00;
+  --button-text-n-image-color: #fff;
+  --font-weight-standart-changable: 400;
+  --font-weight-big-changable: 700;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,33 +34,8 @@
     --background-color-3: #004306;
     --heart-conrour: #00cc14;
     --sparks-color: #f00;
+    --button-text-n-image-color: #00cc14;
+    --font-weight-standart-changable: 465;
+    --font-weight-big-changable: 785;
   }
-}
-
-.theme-dark .footer__button-text {
-  color: var(--themes-main-color);
-}
-
-.theme-dark .footer__image {
-  fill: var(--themes-main-color);
-}
-
-.theme-dark .button__text {
-  color: var(--themes-main-color);
-}
-
-.theme-dark .dialog__button-text {
-  color: var(--themes-main-color);
-}
-
-.theme-dark .dialog__image {
-  fill: var(--themes-main-color);
-}
-
-.theme-dark .card__title {
-  font-weight: var(--font-weight-dark-big);
-}
-
-.theme-dark .card__text {
-  font-weight: var(--font-weight-dark-small);
 }
