@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: var(--font-main), sans-serif;
   background: repeating-linear-gradient(
       to right,
       var(--background-color-1) 0,
@@ -22,7 +23,6 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: 'wght' var(--font-weight-standart-changable);
-  font-family: var(--font-main), sans-serif;
 }
 
 .header {
@@ -136,10 +136,10 @@
   grid-area: title;
   margin: 5px 10px 3px;
   color: var(--themes-main-color);
-  font-variation-settings: 'wght' var(--font-weight-big-changable);
   font-size: 18px;
   font-style: normal;
   line-height: normal;
+  font-variation-settings: 'wght' var(--font-weight-big-changable);
 }
 
 .card__image-topic {
@@ -197,16 +197,16 @@
 ) {
 
   .card__topic-title {
+    text-shadow: none;
     -webkit-text-stroke: 1px var(--themes-background);
     text-stroke: 0.1px var(--themes-background);
-    text-shadow: none;
   }
 }
 
 .card__topic-title {
+  position: absolute;
   top: clamp(1.4375rem, 1.3495rem + 0.3756vw, 1.6875rem);
   right: clamp(0.6875rem, 0.3354rem + 1.5023vw, 1.6875rem);
-  position: absolute;
   opacity: 0.5;
   color: var(--themes-main-color);
   font-family: var(--font-secondary), monospace;
@@ -241,14 +241,18 @@
 }
 
 .card__icon-button {
+  display: flex;
   grid-area: like;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1px;
   margin-left: clamp(10.3125rem, 3.2042rem + 30.3286vw, 30.5rem);
   border: none;
   outline: rgba(var(--themes-main-color) 0) 2px solid;
-  outline-offset: -4px;
+  outline-offset: -2px;
   background-color: transparent;
-  cursor: pointer;
   transition: outline-color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
 }
 
 .card__icon-button:focus {
@@ -261,10 +265,9 @@
 
 .card__like-button {
   grid-area: like;
+  align-self: flex-start;
   width: 130px;
   min-height: 38px;
-  margin-top: 2px;
-  align-self: flex-start;
 }
 
 .button-typical {
@@ -277,8 +280,8 @@
   font-style: normal;
   line-height: 90%; /* 12.6px */
   background: var(--themes-background);
-  cursor: pointer;
   transition: box-shadow ease 0.3s;
+  cursor: pointer;
 }
 
 .button-typical:focus-visible {
@@ -377,9 +380,10 @@
 }
 
 .dialog__button {
+  width: 100%;
   margin-top: 30px;
   padding: 9px 0;
-  width: 100%;
+  text-transform: uppercase;
 }
 
 .dialog::backdrop {
