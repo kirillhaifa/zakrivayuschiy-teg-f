@@ -32,20 +32,8 @@
   }
 }
 
-.card__icon-button {
-  transition: outline-color 0.3s ease, border-color 0.3s ease;
-}
-
 .sparks {
   opacity: 0;
-}
-
-.card__icon-button:focus {
-  outline: none;
-}
-
-.card__icon-button:focus-visible {
-  outline: var(--themes-main-color) 2px solid;
 }
 
 .core {
@@ -91,7 +79,7 @@
 
 .like-icon.is-liked .heart {
   transform-origin: 50% 50%;
-  animation: HeartScale 0.3s alternate 0.1s;
+  animation: HeartScale 0.3s ease-in alternate 0.1s;
 }
 
 @keyframes HeartScale {
